@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Currency converter</title>
+  <script src="./js/bundle.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <h1>Currency Converter</h1>
+
+  <div id="app">
+
+    <h2>Convert from:<h2>
+
+      <label for="convert-from">Convert from:</label>
+      <select id="convert-from" v-model="">
+        <option disabled value="">Select a currency</option>
+        <option v-for="currency in currencies" :value="currency">{{currencies.currency}}</option>
+      </select>
+
+      <div id="selected_currency" v-if="selectedCurrency">
+
+        <h2> {{selectedCurrency.key}} </h2>
+        <p> Rate: {{selectedCurrency.value}} </p>
+
+      </div>
+      </div>
+    </div>
+  </body>
+  </html>
